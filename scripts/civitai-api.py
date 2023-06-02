@@ -375,7 +375,7 @@ def on_ui_tabs():
             download_model = gr.Button(value="4th - Download Model")
             with gr.Row():
                 save_model_in_new = gr.Checkbox(label="Save Model to new folder", value=False)
-                old_lora = gr.Checkbox(label="Save LoRA to additional-networks", value=True)
+                old_lora = gr.Checkbox(label="Save LoRA to additional-networks", value=False)
         with gr.Row():
             preview_image_html = gr.HTML()
         save_text.click(
