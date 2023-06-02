@@ -94,34 +94,34 @@ def download_file(url, file_name):
 
 def make_new_folder(content_type, use_new_folder, model_name, lora_old):
     if content_type == "Checkpoint":
-        folder = "models/Stable-diffusion"
-        new_folder = "models/Stable-diffusion/new"
+        folder = "Model"
+        new_folder = "Modelnew"
     elif content_type == "Hypernetwork":
-        folder = "models/hypernetworks"
-        new_folder = "models/hypernetworks/new"
+        folder = "Hypernetwork"
+        new_folder = "Hypernetwork/new"
     elif content_type == "TextualInversion":
-        folder = "embeddings"
-        new_folder = "embeddings/new"
+        folder = "Embeddings"
+        new_folder = "Embeddings/new"
     elif content_type == "AestheticGradient":
         folder = "extensions/stable-diffusion-webui-aesthetic-gradients/aesthetic_embeddings"
         new_folder = "extensions/stable-diffusion-webui-aesthetic-gradients/aesthetic_embeddings/new"
     elif content_type == "VAE":
-        folder = "models/VAE"
-        new_folder = "models/VAE/new"
+        folder = "Model"
+        new_folder = "Model/new"
     elif content_type == "LORA":
         if lora_old:
-            folder = "extensions/sd-webui-additional-networks/models/lora"
-            new_folder = "extensions/sd-webui-additional-networks/models/lora/new"
+            folder = "Lora"
+            new_folder = "Lora/new"
         else:
             folder = "models/Lora"
             new_folder = "models/Lora/new"
     elif content_type == "LoCon":
         if lora_old:
-            folder = "extensions/sd-webui-additional-networks/models/lora"
-            new_folder = "extensions/sd-webui-additional-networks/models/lora/new"
+            folder = "Lyco"
+            new_folder = "Lyco/new"
         else:
-            folder = "models/Lora"
-            new_folder = "models/Lora/new"
+            folder = "Lyco"
+            new_folder = "Lyco/new"
     if content_type == "TextualInversion" or content_type == "VAE" or \
             content_type == "AestheticGradient":
         if use_new_folder:
@@ -314,7 +314,7 @@ def save_image_files(preview_image_html, model_filename, content_type, use_new_f
     assert(name != "<no select>"), "Please select a Model Filename to download"
     current_directory = os.getcwd()
     while os.path.basename(current_directory) != "stable-diffusion-webui":
-        current_directory = os.path.dirname(current_directory)
+        current_directory = "content/drive/MyDrive/SD-Data"
     new_model_folder = os.path.join(current_directory, model_folder)
     # new_model_folder = os.path.join(current_directory,list_models.replace(" ","_").replace("(","").replace(")","").replace("|","").replace(":","-"))
 
