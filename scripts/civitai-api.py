@@ -94,34 +94,34 @@ def download_file(url, file_name):
 
 def make_new_folder(content_type, use_new_folder, model_name, lora_old):
     if content_type == "Checkpoint":
-        folder = "/content/drive/MyDrive/SD-Data/Model"
-        new_folder = "/content/drive/MyDrive/SD-Data/new"
+        folder = "/content/drive/Shareddrives/StableDiffusion/Model"
+        new_folder = "/content/drive/Shareddrives/StableDiffusion/new"
     elif content_type == "Hypernetwork":
-        folder = "/content/drive/MyDrive/SD-Data/Hypernetwork"
-        new_folder = "/content/drive/MyDrive/SD-Data/new"
+        folder = "/content/drive/Shareddrives/StableDiffusion/Hypernetwork"
+        new_folder = "/content/drive/Shareddrives/StableDiffusion/new"
     elif content_type == "TextualInversion":
-        folder = "/content/drive/MyDrive/SD-Data/Embeddings"
-        new_folder = "/content/drive/MyDrive/SD-Data/Embeddings/new"
+        folder = "/content/drive/Shareddrives/StableDiffusion/Embeddings"
+        new_folder = "/content/drive/Shareddrives/StableDiffusion/Embeddings/new"
     elif content_type == "AestheticGradient":
         folder = "extensions/stable-diffusion-webui-aesthetic-gradients/aesthetic_embeddings"
         new_folder = "extensions/stable-diffusion-webui-aesthetic-gradients/aesthetic_embeddings/new"
     elif content_type == "VAE":
-        folder = "/content/drive/MyDrive/SD-Data/Model"
-        new_folder = "/content/drive/MyDrive/SD-Data/Model/new"
+        folder = "/content/drive/Shareddrives/StableDiffusion/Model"
+        new_folder = "/content/drive/Shareddrives/StableDiffusion/Model/new"
     elif content_type == "LORA":
         if lora_old:
-            folder = "/content/drive/MyDrive/SD-Data/Lora"
-            new_folder = "/content/drive/MyDrive/SD-Data/Lora/new"
+            folder = "/content/drive/Shareddrives/StableDiffusion/Lora"
+            new_folder = "/content/drive/Shareddrives/StableDiffusion/Lora/new"
         else:
-            folder = "/content/drive/MyDrive/SD-Data/models/Lora"
-            new_folder = "/content/drive/MyDrive/SD-Data/models/Lora/new"
+            folder = "/content/drive/Shareddrives/StableDiffusion/models/Lora"
+            new_folder = "/content/drive/Shareddrives/StableDiffusion/models/Lora/new"
     elif content_type == "LoCon":
         if lora_old:
-            folder = "/content/drive/MyDrive/SD-Data/Lyco"
-            new_folder = "/content/drive/MyDrive/SD-Data/Lyco/new"
+            folder = "/content/drive/Shareddrives/StableDiffusion/Lyco"
+            new_folder = "/content/drive/Shareddrives/StableDiffusion/Lyco/new"
         else:
-            folder = "/content/drive/MyDrive/SD-Data/Lyco"
-            new_folder = "/content/drive/MyDrive/SD-Data/Lyco/new"
+            folder = "/content/drive/Shareddrives/StableDiffusion/Lyco"
+            new_folder = "/content/drive/Shareddrives/StableDiffusion/Lyco/new"
     if content_type == "TextualInversion" or content_type == "VAE" or \
             content_type == "AestheticGradient":
         if use_new_folder:
