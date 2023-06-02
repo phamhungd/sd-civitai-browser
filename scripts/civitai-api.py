@@ -94,34 +94,34 @@ def download_file(url, file_name):
 
 def make_new_folder(content_type, use_new_folder, model_name, lora_old):
     if content_type == "Checkpoint":
-        folder = "Model"
-        new_folder = "Modelnew"
+        folder = "/content/drive/MyDrive/SD-Data/Model"
+        new_folder = "/content/drive/MyDrive/SD-Data/new"
     elif content_type == "Hypernetwork":
-        folder = "Hypernetwork"
-        new_folder = "Hypernetwork/new"
+        folder = "/content/drive/MyDrive/SD-Data/Hypernetwork"
+        new_folder = "/content/drive/MyDrive/SD-Data/new"
     elif content_type == "TextualInversion":
-        folder = "Embeddings"
-        new_folder = "Embeddings/new"
+        folder = "/content/drive/MyDrive/SD-Data/Embeddings"
+        new_folder = "/content/drive/MyDrive/SD-Data/Embeddings/new"
     elif content_type == "AestheticGradient":
         folder = "extensions/stable-diffusion-webui-aesthetic-gradients/aesthetic_embeddings"
         new_folder = "extensions/stable-diffusion-webui-aesthetic-gradients/aesthetic_embeddings/new"
     elif content_type == "VAE":
-        folder = "Model"
-        new_folder = "Model/new"
+        folder = "/content/drive/MyDrive/SD-Data/Model"
+        new_folder = "/content/drive/MyDrive/SD-Data/Model/new"
     elif content_type == "LORA":
         if lora_old:
-            folder = "Lora"
-            new_folder = "Lora/new"
+            folder = "/content/drive/MyDrive/SD-Data/Lora"
+            new_folder = "/content/drive/MyDrive/SD-Data/Lora/new"
         else:
-            folder = "models/Lora"
-            new_folder = "models/Lora/new"
+            folder = "/content/drive/MyDrive/SD-Data/models/Lora"
+            new_folder = "/content/drive/MyDrive/SD-Data/models/Lora/new"
     elif content_type == "LoCon":
         if lora_old:
-            folder = "Lyco"
-            new_folder = "Lyco/new"
+            folder = "/content/drive/MyDrive/SD-Data/Lyco"
+            new_folder = "/content/drive/MyDrive/SD-Data/Lyco/new"
         else:
-            folder = "Lyco"
-            new_folder = "Lyco/new"
+            folder = "/content/drive/MyDrive/SD-Data/Lyco"
+            new_folder = "/content/drive/MyDrive/SD-Data/Lyco/new"
     if content_type == "TextualInversion" or content_type == "VAE" or \
             content_type == "AestheticGradient":
         if use_new_folder:
@@ -135,14 +135,14 @@ def make_new_folder(content_type, use_new_folder, model_name, lora_old):
                 os.makedirs(model_folder)
     else:
         if use_new_folder:
-            model_folder = os.path.join(new_folder,model_name.replace(" ","_").replace("(","").replace(")","").replace("|","").replace(":","-"))
+            model_folder = os.path.join(new_folder)
             if not os.path.exists(new_folder):
                 os.makedirs(new_folder)
             if not os.path.exists(model_folder):
                 os.makedirs(model_folder)
 
         else:
-            model_folder = os.path.join(folder,model_name.replace(" ","_").replace("(","").replace(")","").replace("|","").replace(":","-"))
+            model_folder = os.path.join(folder)
             if not os.path.exists(model_folder):
                 os.makedirs(model_folder)
     return model_folder
