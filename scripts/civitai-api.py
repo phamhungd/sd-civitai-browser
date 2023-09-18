@@ -117,11 +117,11 @@ def make_new_folder(content_type, use_new_folder, model_name, lora_old):
             new_folder = "/content/drive/MyDrive/SD-Data/models/Lora/new"
     elif content_type == "LoCon":
         if lora_old:
-            folder = "/content/drive/MyDrive/SD-Data/Lyco"
-            new_folder = "/content/drive/MyDrive/SD-Data/Lyco/new"
+            folder = "/content/drive/MyDrive/SD-Data/Lora"
+            new_folder = "/content/drive/MyDrive/SD-Data/Lora/new"
         else:
-            folder = "/content/drive/MyDrive/SD-Data/Lyco"
-            new_folder = "/content/drive/MyDrive/SD-Data/Lyco/new"
+            folder = "/content/drive/MyDrive/SD-Data/Lora"
+            new_folder = "/content/drive/MyDrive/SD-Data/Lora/new"
     if content_type == "TextualInversion" or content_type == "VAE" or \
             content_type == "AestheticGradient":
         if use_new_folder:
