@@ -117,11 +117,11 @@ def make_new_folder(content_type, use_new_folder, model_name, lora_old):
             new_folder = "/content/drive/Shareddrives/StableDiffusion/Lora/new"
     elif content_type == "LoCon":
         if lora_old:
-            folder = "/content/drive/Shareddrives/StableDiffusion/Lyco"
-            new_folder = "/content/drive/Shareddrives/StableDiffusion/Lyco/new"
+            folder = "/content/drive/Shareddrives/StableDiffusion/Lora"
+            new_folder = "/content/drive/Shareddrives/StableDiffusion/Lora/new"
         else:
-            folder = "/content/drive/Shareddrives/StableDiffusion/Lyco"
-            new_folder = "/content/drive/Shareddrives/StableDiffusion/Lyco/new"
+            folder = "/content/drive/Shareddrives/StableDiffusion/Lora"
+            new_folder = "/content/drive/Shareddrives/StableDiffusion/Lora/new"
     if content_type == "TextualInversion" or content_type == "VAE" or \
             content_type == "AestheticGradient":
         if use_new_folder:
