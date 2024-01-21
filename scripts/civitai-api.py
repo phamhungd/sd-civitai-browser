@@ -113,8 +113,8 @@ def make_new_folder(content_type, use_new_folder, model_name, lora_old):
             folder = "/content/drive/MyDrive/SD-Data/Lora"
             new_folder = "/content/drive/MyDrive/SD-Data/Lora/new"
         else:
-            folder = "/content/drive/MyDrive/SD-Data/models/Lora"
-            new_folder = "/content/drive/MyDrive/SD-Data/models/Lora/new"
+            folder = "/content/drive/MyDrive/SD-Data/Lora"
+            new_folder = "/content/drive/MyDrive/SD-Data/Lora/new"
     elif content_type == "LoCon":
         if lora_old:
             folder = "/content/drive/MyDrive/SD-Data/Lora"
